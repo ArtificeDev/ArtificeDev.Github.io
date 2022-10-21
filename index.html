@@ -73,7 +73,25 @@
        background-color:#F7F7F7;
        bottom: 3px;
        width: 100%;
-      }   
+      }
+      div.click-to-top span {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        color: dark gray;
+      }
+
+      div.click-to-top:hover span {
+        display: block;
+      }
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
     </style>
   </head>
   <body>
@@ -106,7 +124,10 @@
       </div>
     <button type="button" class="collapsible">image</button>
       <div class="content">
-      <img src="IMAGES/20221020/00001-713290629-doric column with fluting close up.png" width="512" height="512">
+        <div class="click-to-top">
+          <img src="IMAGES/20221020/00001-713290629-doric column with fluting close up.png" width="512" height="512">
+          <span>'doric column with fluting, close up'</span>
+        </div>
     </div>
     <div class="footer">Brian Orser & Nima Shariat Zamanpour</div>
   

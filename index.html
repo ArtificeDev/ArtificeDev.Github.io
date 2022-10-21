@@ -24,7 +24,11 @@
     </span>-->
     </p>
     <h1> Untitled Column Project </h1>
-    <h3> 2022.10.20 </h3>
+    <button type="button" class="collapsible">2022.10.20</button>
+      <div class="content">
+        <h3> text </h3>
+        <h3> image </h3>
+      </div>
     <img src="IMAGES/20221020/00001-713290629-doric column with fluting close up.png" width="512" height="512">
     <br>
     <p>
@@ -41,4 +45,20 @@
       Which is all to say, classicism contains as much novelty, even mutation, as it does order, bound by rules. 
       And it is this powerful blend which makes the classical column such a rich object of study for artificial intelligence.
     </p>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+     coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+       content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
   </body>
